@@ -1,0 +1,13 @@
+{% ckan_extends %}
+
+{% block bodytag %}
+    {{ super() }}
+    {% if h.saasportal_is_admin() %}
+        class="are-hiring"
+    {% endif %}
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    {% resource 'saasportal/style.css' %}
+{% endblock %}

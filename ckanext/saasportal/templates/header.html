@@ -1,0 +1,9 @@
+{% ckan_extends %}
+
+{% block header_wrapper %}
+    {% if h.saasportal_is_admin() %}
+        <a href="https://www.viderum.com/extensions?ref={{ app_globals.site_url }}" class="hiring"> Do you want extensions for
+        your CKAN Instance? Check out the Extension Store</a>
+    {% endif %}
+    {{ super() }}
+{% endblock %}
